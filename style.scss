@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Quicksand:wght@500&family=Raleway:ital,wght@1,500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  background: #f1f6f9;
+  max-width: 100%;
+  width: 70%;
+  height: 80vh;
+  max-height: 80%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "no1 no1 no1 no2 no3" "no4 no5 no5 no5 no3";
+  gap: 15px;
+  display: relative;
+  .no1 {
+    grid-area: no1;
+    background: #968c83;
+  }
+  .no2 {
+    grid-area: no2;
+    background: #9ba4b4;
+  }
+  .no3 {
+    grid-area: no3;
+    background: cadetblue;
+  }
+  .no4 {
+    grid-area: no4;
+    background: #a8dda8;
+  }
+  .no5 {
+    grid-area: no5;
+    background: #d9adad;
+  }
+  .no1,
+  .no2,
+  .no3,
+  .no4,
+  .no5 {
+    border-radius: 10px;
+    align-content: space-around;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+.box {
+  padding: 15px 15px 20px 15px;
+  max-width: 100%;
+  max-height: 100%;
+  .content {
+    max-width: 100%;
+    height: 100%;
+
+    .heading {
+      display: flex;
+      max-width: 100%;
+      img {
+        width: 50px;
+        border-radius: 50%;
+        max-width: 100%;
+        border: 2px solid #fff;
+      }
+      .info {
+        margin-left: 20px;
+        font-family: "Raleway", sans-serif;
+        h3 {
+          font-size: 0.7rem;
+          display: block;
+        }
+        p {
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .description {
+      max-width: 100%;
+      padding: 5px;
+      max-height: 100%;
+      .top {
+        font-family: "Quicksand", sans-serif;
+        font-size: 11px;
+      }
+      .bottom {
+        font-family: "Poppins", sans-serif;
+        font-size: 10px;
+        display: block;
+        max-width: 100%;
+        color: #fbf7f0;
+      }
+    }
+  }
+}
+
+@media (max-width: 625px) {
+  .container {
+    display: block;
+    height: 300px;
+    .box {
+      margin-bottom: 10px;
+    }
+  }
+}
